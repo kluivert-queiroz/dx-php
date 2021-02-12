@@ -8,5 +8,3 @@ class ErrorCause {
     public $description = "";
 
 }
-
-?>

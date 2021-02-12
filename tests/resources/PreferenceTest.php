@@ -23,10 +23,10 @@ class PreferenceTest extends \PHPUnit\Framework\TestCase
     public function testCreatePrefence()
     {
 
-        $preference = new MercadoPago\Preference();
+        $preference = new MercadoPago\Entities\Preference();
 
         # Building an item
-        $item = new MercadoPago\Item();
+        $item = new MercadoPago\Entities\Shared\Item();
         $item->title = "item";
         $item->quantity = 1;
         $item->unit_price = 100; 
@@ -41,7 +41,7 @@ class PreferenceTest extends \PHPUnit\Framework\TestCase
     }
 
     public function testFindPreferenceById(){  
-        $preference = MercadoPago\Preference::find_by_id(self::$last_preference->id);
+        $preference = MercadoPago\Entities\Preference::find_by_id(self::$last_preference->id);
         $this->assertEquals($preference->id, self::$last_preference->id);
     }
 }

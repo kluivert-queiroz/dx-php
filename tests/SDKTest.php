@@ -22,8 +22,9 @@ class ConfigTest extends TestCase
             $dotenv->load();
         }
 
-        MercadoPago\SDK::setClientId(getenv('CLIENT_ID'));
-        MercadoPago\SDK::setClientSecret(getenv('CLIENT_SECRET')); 
+        // MercadoPago\SDK::setClientId(getenv('CLIENT_ID'));
+        // MercadoPago\SDK::setClientSecret(getenv('CLIENT_SECRET')); 
+        MercadoPago\SDK::setAccessToken(getenv('ACCESS_TOKEN')); 
     }
 
     /**

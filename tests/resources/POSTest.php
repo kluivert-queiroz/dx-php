@@ -23,7 +23,7 @@ class InstoreTest extends TestCase
     }
 
     public function testCreatePos() {
-        $pos = new MercadoPago\POS();
+        $pos = new MercadoPago\Entities\POS();
         $pos->name = "mypointofsale";
         $pos->fixed_amount =true; 
         $pos->external_id = "mypos" . rand(1, 10000);
@@ -36,11 +36,11 @@ class InstoreTest extends TestCase
     /**
      * @depends testCreatePos
      */
-    public function testUpdatePos(MercadoPago\POS $created_pos) {
+    public function testUpdatePos(MercadoPago\Entities\POS $created_pos) {
         $created_pos->name = "mypointofsalenewname";
         $created_pos->update();
 
-        $pos = MercadoPago\POS::find_by_id($created_pos->id);
+        $pos = MercadoPago\Entities\POS::find_by_id($created_pos->id);
 
         $this->assertEquals($pos->name, 'mypointofsalenewname');
         
@@ -49,11 +49,11 @@ class InstoreTest extends TestCase
     /**
      * @depends testCreatePos 
      */
-    public function testSearchPos(MercadoPago\POS $pos) {
+    public function testSearchPos(MercadoPago\Entities\POS $pos) {
         $filters = array(
             "external_id" => $pos->external_id
         );
-        $poss = MercadoPago\POS::search($filters);
+        $poss = MercadoPago\Entities\POS::search($filters);
         $poss = $poss->getArrayCopy();
         $poss = end($poss);
 
@@ -62,8 +62,8 @@ class InstoreTest extends TestCase
 
     
 
-    // public function testDeletePos(MercadoPago\POS $pos) {
-    //     $pos = new MercadoPago\POS();
+    // public function testDeletePos(MercadoPago\Entities\POS $pos) {
+    //     $pos = new MercadoPago\Entities\POS();
 
     // }
 

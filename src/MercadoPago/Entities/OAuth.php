@@ -4,7 +4,9 @@
  */
 namespace MercadoPago\Entities;
 use MercadoPago\Annotation\RestMethod;
-use MercadoPago\Annotation\Attribute; 
+use MercadoPago\Annotation\Attribute;
+use MercadoPago\Entity;
+use MercadoPago\SDK;
 
 /**
  * OAuth class

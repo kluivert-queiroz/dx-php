@@ -8,6 +8,7 @@ use http\Params;
 use MercadoPago\Annotation\RestMethod;
 use MercadoPago\Annotation\RequestParam;
 use MercadoPago\Annotation\Attribute;
+use MercadoPago\Entity;
 
 /**
  * discount Campaign class

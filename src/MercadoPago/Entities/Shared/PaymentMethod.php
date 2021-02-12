@@ -4,6 +4,7 @@ namespace MercadoPago\Entities\Shared;
 use MercadoPago\Annotation\RestMethod;
 use MercadoPago\Annotation\RequestParam;
 use MercadoPago\Annotation\Attribute;
+use MercadoPago\Entity;
 
 /**
  * Payment Method class

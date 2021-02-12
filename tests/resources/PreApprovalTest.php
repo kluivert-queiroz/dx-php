@@ -26,7 +26,7 @@ class PreApprovalTest extends \PHPUnit\Framework\TestCase
 
     public function testCreatePrefence()
     {
-        $preapproval_data = new MercadoPago\Preapproval();
+        $preapproval_data = new MercadoPago\Entities\Preapproval();
         $preapproval_data->payer_email = getenv('USER_EMAIL');
         $preapproval_data->back_url = "https://google.com";
         $preapproval_data->reason = "Reason PreApproval";
